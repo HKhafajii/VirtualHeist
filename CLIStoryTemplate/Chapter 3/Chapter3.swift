@@ -6,5 +6,6 @@
 import Foundation
 
 func chapterThree() {
-    // Your portion of the story goes here
+    print("what up doe")
+    print("whats going om)")
 }
