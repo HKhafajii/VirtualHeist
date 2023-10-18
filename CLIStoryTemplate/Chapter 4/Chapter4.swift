@@ -6,5 +6,6 @@
 import Foundation
 
 func chapterFour() {
-    // Your portion of the story goes here
+    //Outline of Format of Chapter Four
+    print("Chapter Four: Honor Amongts Hackers")
 }
