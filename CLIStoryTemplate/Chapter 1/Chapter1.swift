@@ -7,7 +7,6 @@ import Foundation
 
 func chapterOne() {
     // Your portion of the story goes here
-    print("Brodie got shot dead")
-    print("BRodie is so damn confused he needs help")
-    print("Today is tomorrow tomorrow is today")
+    
+   print("In 2057, a world gone completely in the direction expected by the most influential scientist 34 years ago.")
 }
