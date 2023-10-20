@@ -8,8 +8,21 @@ import Foundation
 func chapterOne() {
     // Your portion of the story goes here
     let names = "Tavon, Hassan, and Tre"
-    let question = "What do you think should happen?"
+    let club = "The Virtual Justice Club"
+    let game = "The Cyber Space"
+    let blaster = "Laser Blazer 9000"
+    let boots = "Fly Guys 25's"
     
-   print("Chapter 1 The Beginning of The End \nIn 2057, a world gone completely in the direction expected by the most influential scientist 34 years ago.")
-    print("A group of friends, \(names), grew up on the East side of Wisconson")
+    
+    func Introduction() {
+        print("Chapter 1 The Beginning of The End \nIn 2057, a world gone completely in the direction expected by the most influential scientist 34 years ago.")
+        print("A group of friends, \(names), grew up on the East side of Wisconson, where they attended Mitt Romney High. These three we're very big into the virtual world, to the point they started they're own club, \(club)")
+        print("Today they decided to enter \(game), and fight the newest challenge made by the great corruption that darkens their world.")
+    }
+    func chall1(){
+        print("First things first, \(names) come up with the decision to pick their first tool of the day")
+    }
+    
+ 
+        
 }
