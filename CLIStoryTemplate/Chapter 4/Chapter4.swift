@@ -7,5 +7,5 @@ import Foundation
 
 func chapterFour() {
     //Outline of Format of Chapter Four
-    print("Chapter Four: Honor Amongts Hackers")
+    print("Story Four: A Deal With The Devil")
 }
