@@ -16,7 +16,7 @@ func chapterOne() {
     
     
     func Introduction() {
-        print("Chapter 1 The Beginning of The End \nIn 2057, a world gone completely in the direction expected by the most influential scientist 34 years ago.")
+        print("Chapter 1 The Beginning of The End \n\tIn 2057, a world gone completely in the direction expected by the most influential scientist 34 years ago.")
         print("A group of friends, \(names), grew up on the East side of Wisconson, where they attended Mitt Romney High. These three we're very big into the virtual world, to the point they started they're own club, \(club)")
         print("Today they decided to enter \(game), and fight the newest challenge made by the great corruption that darkens their world.")
     }
@@ -24,6 +24,7 @@ func chapterOne() {
         print("\(names) come up with the decision to pick their first tool of the day. They can etiher pick up the \(blaster), the \(boots), or \(invisibility)")
         
     }
+    print(Introduction())
     
  
         
