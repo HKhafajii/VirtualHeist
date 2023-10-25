@@ -7,5 +7,5 @@ import Foundation
 
 func chapterThree() {
     print("what up doe")
-    print("whats going om)")
+    print("whats going om")
 }
