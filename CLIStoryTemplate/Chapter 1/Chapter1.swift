@@ -12,6 +12,7 @@ func chapterOne() {
     let game = "The Cyber Space"
     let blaster = "Laser Blazer 9000"
     let boots = "Fly Guys 25's"
+    let invisibility = "Dark Doagans Invisibility potion"
     
     
     func Introduction() {
@@ -20,7 +21,8 @@ func chapterOne() {
         print("Today they decided to enter \(game), and fight the newest challenge made by the great corruption that darkens their world.")
     }
     func chall1(){
-        print("First things first, \(names) come up with the decision to pick their first tool of the day")
+        print("\(names) come up with the decision to pick their first tool of the day. They can etiher pick up the \(blaster), the \(boots), or \(invisibility)")
+        
     }
     
  
