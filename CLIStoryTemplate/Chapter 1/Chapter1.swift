@@ -7,7 +7,7 @@ import Foundation
 
 func chapterOne() {
     // Your portion of the story goes here
-    let names = "Tavon, Hassan, and Tre"
+    let names = "Tavon, Hassan, Ayme, Tre, Dante"
     let club = "The Virtual Justice Club"
     let game = "The Cyber Space"
 
@@ -35,7 +35,20 @@ func chapterOne() {
         
         
         print("\(names) come up with the decision to pick their first tool of the day. They can etiher pick up the \(blaster), the \(boots), or \(invisibility). Choose 1 for \(blaster), 2 for \(boots), 3 for \(invisibility)")
-        let userInput = readLine()
+        print("Choose 1 for \(blaster)")
+        print("Choose 2 for \(boots)")
+        print("Choose 3 for \(invisibility)")
+        var userInput = readLine()
+        if userInput == 1 {
+            
+        }
+        else if userInput = 2 {
+            
+        }
+        else {
+            
+        }
+       
         
 //        if let int = Int(userInput) {
 //            
