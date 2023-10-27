@@ -6,6 +6,6 @@
 import Foundation
 
 func chapterFour() {
-    //Outline of Format of Chapter Four
-    print("Chapter Four: Honor Amongts Hackers")
+    let chapterTitle = String("Story 4: A Deal With The Devil")
+    print(chapterTitle)
 }
