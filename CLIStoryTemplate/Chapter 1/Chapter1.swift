@@ -27,6 +27,7 @@ func chapterOne() {
     func Introduction() {
         print("The Fiery Manuever \n\tIn 2057, a world gone completely in the direction expected by the most influential scientist 34 years ago. A group of friends, \(names), grew up on the East side of Wisconson, where they attended Mitt Romney High. These three we're very big into the virtual world, to the point they started they're own club, \(club). Today they decided to enter \(game), and fight the newest challenge made by the great corruption that darkens their world.")
     }
+    
     func chall1(haveBoots: Bool, haveInvis: Bool, haveBlaster: Bool){
         let blaster = "Laser Blazer 9000"
         let boots = "Fly Guys 25's"
@@ -34,26 +35,32 @@ func chapterOne() {
         
         
         
-        print("\(names) come up with the decision to pick their first tool of the day. They can etiher pick up the \(blaster), the \(boots), or \(invisibility). Choose 1 for \(blaster), 2 for \(boots), 3 for \(invisibility)")
-        print("Choose 1 for \(blaster)")
-        print("Choose 2 for \(boots)")
-        print("Choose 3 for \(invisibility)")
+        print("\(names) come up with the decision to pick their first tool of the day. They can etiher pick up the \(blaster), the \(boots), or \(invisibility).")
+        print("Choose A for \(blaster)")
+        print("Choose B for \(boots)")
+        print("Choose B for \(invisibility)")
+    
         var userInput = readLine()
-        if userInput == 1 {
-            
+        
+        if userInput == "1" {
+            var haveBlaster = true
         }
-        else if userInput = 2 {
+        else if userInput == "2" {
             
+            var haveBoots = true
+        }
+        else if userInput == "3" {
+            var haveInvis = true
         }
         else {
-            
+            print("Please re run and enter the correct number!")
         }
        
         
 //        if let int = Int(userInput) {
 //            
 //        }
-        let int = userInput
+        
        
         
         
