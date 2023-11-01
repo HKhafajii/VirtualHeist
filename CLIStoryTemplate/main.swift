@@ -5,6 +5,8 @@
 
 import Foundation
 
+
+let name: String = "Tre, Ayme, Hassan, Tavon, Dante" 
 func readStory() {
     
     chapterOne()
@@ -13,5 +15,6 @@ func readStory() {
     chapterFour()
     chapterFive()
 }
+
 
 readStory()
