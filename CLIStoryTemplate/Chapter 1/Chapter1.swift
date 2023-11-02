@@ -5,22 +5,26 @@
 
 import Foundation
 struct storyInfo {
-    var names: [String] = ["Tavon", "Hassan", "Ayme", "Tre", "Dante"]
+    var names = ["Tavon", "Hassan", "Ayme", "Tre", "Dante"]
     let club = "The Virtual Justice Club"
     let game = "The Cyber Space"
-    var tools: [String]
+    var choice: [String]
+    
+    let chall2Lines = [""]
+    
     //"Laser Blazer 9000", "Fly Guys 25's", "Dark Doagans Invisibility potion"
     
-    mutating func changeTools(setOfTools: [String]) {
-        self = storyInfo(tools: setOfTools)
-        
+    mutating func changeChoice(setOfChoices: [String]) {
+        self = storyInfo(choice: setOfChoices)
     }
+        
+   
     
 }
 
 
 func chapterOne() {
-    var info = storyInfo(tools: ["Laser Blazer 9000", "Fly Guys 25's", "Dark Doagans Invisibility potion"])
+    var info = storyInfo(choice: ["Laser Blazer 9000", "Fly Guys 25's", "Dark Doagans Invisibility potion"])
     
     // Your portion of the story goes here
    
@@ -52,28 +56,28 @@ func chapterOne() {
         
         
         
-        print("\(info.names[2]) come up with the decision to pick their first tool of the day. They can etiher pick up the \(info.tools[0]), the \(info.tools[1]), or \(info.tools[2]).")
+        print("\(info.names[2]) come up with the decision to pick their first tool of the day. They can etiher pick up the \(info.choice[0]), the \(info.choice[1]), or \(info.choice[2]).")
         repeat {
-        for (index, tool) in info.tools.enumerated() {
+        for (index, tool) in info.choice.enumerated() {
             print("Choose \(index + 1) for \(tool)")
         }
         
         if let userInput = readLine() {
-            let choice = userInput
+            let userChoice = userInput
             
             
             
                 
-                if choice == "1" {
+                if userChoice == "1" {
                     haveBlaster = true
                     userAnswer = true
                 }
-                else if choice == "2" {
+                else if userChoice == "2" {
                     userAnswer = true
                     
                     haveBoots = true
                 }
-                else if choice == "3" {
+                else if userChoice == "3" {
                     userAnswer = true
                     
                     haveInvis = true
@@ -110,13 +114,24 @@ func chapterOne() {
         
         
         
-        
-        
-        
-        func chall2() -> String {
-            info.changeTools(setOfTools: ["asd"])
-            return "Just when they thought they cleared the tough stuff out the way, \(info.names.joined(separator: ", ")) ended up being split apart!"
+    struct Chall2 {
+        var chall2Lines: [String]
+        mutating func changeLines(newLines: [String]) {
+            self = Chall2(chall2Lines: newLines)
+            
         }
+        
+    }
+    func chall2() -> String {
+        var secChall = Chall2(chall2Lines: ["asd"])
+        info.changeChoice(setOfChoices: ["left path", "right path"])
+        print("Just when they thought they cleared the tough stuff out the way, \(info.names.joined(separator: ", ")) ended up being split apart!")
+        
+        print("\(info.names[1]) ends up all alone, split from group. ")
+        
+    }
+        
+        
         
         
     Introduction()
