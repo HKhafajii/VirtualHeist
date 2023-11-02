@@ -120,9 +120,7 @@ func chapterOne() {
         
         
     Introduction()
-    while userAnswer == false {
         chall1()
-    }
 }
     
    
