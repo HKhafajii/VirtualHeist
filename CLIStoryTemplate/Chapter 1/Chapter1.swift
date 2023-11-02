@@ -53,16 +53,16 @@ func chapterOne() {
         
         
         print("\(info.names[2]) come up with the decision to pick their first tool of the day. They can etiher pick up the \(info.tools[0]), the \(info.tools[1]), or \(info.tools[2]).")
-        
+        repeat {
         for (index, tool) in info.tools.enumerated() {
             print("Choose \(index + 1) for \(tool)")
         }
         
-            if let userInput = readLine() {
-                let choice = userInput
-                
-                
-                
+        if let userInput = readLine() {
+            let choice = userInput
+            
+            
+            
                 
                 if choice == "1" {
                     haveBlaster = true
@@ -70,18 +70,19 @@ func chapterOne() {
                 }
                 else if choice == "2" {
                     userAnswer = true
-
+                    
                     haveBoots = true
                 }
                 else if choice == "3" {
                     userAnswer = true
-
+                    
                     haveInvis = true
                 }
                 else {
                     print("Please re run and enter the correct number!")
                 }
-        }
+            }
+        } while !userAnswer
         
         
             if haveBlaster == true {

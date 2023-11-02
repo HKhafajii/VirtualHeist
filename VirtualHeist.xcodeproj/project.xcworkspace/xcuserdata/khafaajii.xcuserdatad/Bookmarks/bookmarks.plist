@@ -34,16 +34,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>                let choice = userInput
+				<string>let choice = userInput
 </string>
 				<key>leading</key>
 				<string>        
-            if let userInput = readLine() {
-</string>
+        if let userInput = readLine() {
+            </string>
 				<key>trailing</key>
-				<string>                
-                
-                
+				<string>            
+            
+            
 </string>
 			</dict>
 			<key>type</key>
