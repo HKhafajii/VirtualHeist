@@ -9,15 +9,16 @@ struct storyInfo {
     let club = "The Virtual Justice Club"
     let game = "The Cyber Space"
     var choice: [String]
+    static var userAnswer = false
     
-    let chall2Lines = [""]
+    
     
     //"Laser Blazer 9000", "Fly Guys 25's", "Dark Doagans Invisibility potion"
     
     mutating func changeChoice(setOfChoices: [String]) {
         self = storyInfo(choice: setOfChoices)
     }
-        
+    
    
     
 }
@@ -29,7 +30,7 @@ func chapterOne() {
     // Your portion of the story goes here
    
 //    var userInput: String
-    var userAnswer: Bool = false
+   
     
     func survive(alive: Bool) -> String {
         if alive == true {
@@ -70,15 +71,15 @@ func chapterOne() {
                 
                 if userChoice == "1" {
                     haveBlaster = true
-                    userAnswer = true
+                    storyInfo.userAnswer = true
                 }
                 else if userChoice == "2" {
-                    userAnswer = true
+                    storyInfo.userAnswer = true
                     
                     haveBoots = true
                 }
                 else if userChoice == "3" {
-                    userAnswer = true
+                    storyInfo.userAnswer = true
                     
                     haveInvis = true
                 }
@@ -86,7 +87,7 @@ func chapterOne() {
                     print("Please re run and enter the correct number!")
                 }
             }
-        } while !userAnswer
+        } while !storyInfo.userAnswer
         
         
             if haveBlaster == true {
@@ -116,18 +117,41 @@ func chapterOne() {
         
     struct Chall2 {
         var chall2Lines: [String]
-        mutating func changeLines(newLines: [String]) {
-            self = Chall2(chall2Lines: newLines)
-            
+        var problem: String
+        mutating func changeLines(newLines: [String], newProblem: String) {
+            self = Chall2(chall2Lines: newLines, problem: newProblem)
+        }
+       
+    }
+    
+    
+    func chall2() {
+        storyInfo.userAnswer = false
+        let secChall = Chall2(chall2Lines: ["went to the", "They finally escaped"], problem: "They ran into a cave that's so dark they lost eachother")
+        info.changeChoice(setOfChoices: ["left path", "right path", "straight path"])
+        
+        
+        enum pathchoice{
+            case path1
+            case path2
+            case path3
+        }
+        if let userInput = readLine(){
+            switch pathchoice{
+            case .path1:
+            default:
+                return "Try entering a number again"
+            }
         }
         
-    }
-    func chall2() -> String {
-        var secChall = Chall2(chall2Lines: ["asd"])
-        info.changeChoice(setOfChoices: ["left path", "right path"])
-        print("Just when they thought they cleared the tough stuff out the way, \(info.names.joined(separator: ", ")) ended up being split apart!")
+        print("Just when they thought they cleared the tough stuff out the way, \(secChall.problem). \(info.names.joined(separator: ", ")). Being split apart \(info.names[1]) ends up all alone, split from group.")
+        repeat {
+            for (index, direction) in info.choice.enumerated() {
+                print("Choose \(index + 1) to take the \(direction)")
+            }
+        } while !storyInfo.userAnswer
         
-        print("\(info.names[1]) ends up all alone, split from group. ")
+        
         
     }
         
@@ -136,6 +160,7 @@ func chapterOne() {
         
     Introduction()
         chall1()
+        chall2()
 }
     
    
