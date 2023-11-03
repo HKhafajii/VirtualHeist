@@ -130,26 +130,49 @@ func chapterOne() {
         let secChall = Chall2(chall2Lines: ["went to the", "They finally escaped"], problem: "They ran into a cave that's so dark they lost eachother")
         info.changeChoice(setOfChoices: ["left path", "right path", "straight path"])
         
-        
+       
         enum pathchoice{
             case path1
             case path2
             case path3
         }
-        if let userInput = readLine(){
-            switch pathchoice{
-            case .path1:
-            default:
-                return "Try entering a number again"
-            }
-        }
-        
-        print("Just when they thought they cleared the tough stuff out the way, \(secChall.problem). \(info.names.joined(separator: ", ")). Being split apart \(info.names[1]) ends up all alone, split from group.")
         repeat {
-            for (index, direction) in info.choice.enumerated() {
-                print("Choose \(index + 1) to take the \(direction)")
+            print("Just when they thought they cleared the tough stuff out the way, \(secChall.problem). \(info.names.joined(separator: ", ")). Being split apart \(info.names[1]) ends up all alone, split from group.")
+         
+                for (index, direction) in info.choice.enumerated() {
+                    print("Choose \(index + 1) to take the \(direction)")
+                }
+            
+            if let userInput = readLine(), let userChoice = Int(userInput) {
+                switch userChoice {
+                case 1:
+                    let result = pathchoice.path1
+                    print("You chose the \(info.choice[0])")
+                    storyInfo.userAnswer = true
+                case 2:
+                    let result = pathchoice.path2
+                    print("You chose the \(info.choice[1])")
+                    storyInfo.userAnswer = true
+                case 3:
+                    let result = pathchoice.path3
+                    print("You chose the \(info.choice[2])")
+                    storyInfo.userAnswer = true
+                default:
+                    print("Please enter 1, 2, or 3!")
+                }
+            } else {
+                print("Please enter a valid number!")
             }
         } while !storyInfo.userAnswer
+//        if let userInput = readLine(){
+//            switch pathchoice{
+//            case .path1:
+//            default:
+//                return "Try entering a number again"
+//            }
+//        }
+        
+      
         
         
         
