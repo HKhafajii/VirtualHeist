@@ -45,7 +45,15 @@ struct storyInfo {
     
     
     func Introduction() {
-        print("The Fiery Manuever \nIn 2057, a world gone completely in the direction expected by the most influential scientist 34 years ago. \nA group of friends, \(info.names.joined(separator: ", ")), grew up on the East side of Wisconson, where they attended Mitt Romney High. \nThese three we're very big into the virtual world, to the point they started they're own club, \(info.club). \nToday they decided to enter \(info.game), and fight the newest challenge made by the great corruption that darkens their world.")
+        print(
+"""
+The Fiery Manuever
+In 2057, a world gone completely in the direction expected by the most influential scientist 34 years ago.
+A group of friends, \(info.names.joined(separator: ", ")), grew up on the East side of Wisconson, where they attended Mitt Romney High.
+These three we're very big into the virtual world, to the point they started they're own club, \(info.club).
+Today they decided to enter \(info.game), and fight the newest challenge made by the great corruption that darkens their world.
+"""
+        )
     }
     
     
@@ -97,22 +105,6 @@ struct storyInfo {
             }
             
         } while !storyInfo.userAnswer || storyInfo.dead == true
-//        if haveBlaster == true {
-//            print("You can't shoot through dragon skin!")
-//            print(survive(alive: false))
-//        }
-//        else if haveInvis == true {
-//            print("The dragon just burned the whole room!")
-//            print(survive(alive: false))
-//        }
-//        else {
-//            print("Good choice, \(info.names.joined(separator: ", ")) used the boots and got away!")
-//            print(survive(alive: true))
-//        }
-        
-        
-            
-        
     }
    
         
@@ -125,7 +117,6 @@ struct storyInfo {
         mutating func changeLines(newLines: [String], newProblem: String) {
             self = Chall2(chall2Lines: newLines, problem: newProblem)
         }
-       
     }
     
     
@@ -151,18 +142,38 @@ struct storyInfo {
                 switch userChoice {
                 case 1:
                     _ = pathchoice.path1
-                    print("You chose the \(info.choice[0])")
                     storyInfo.userAnswer = true
-                    storyInfo.dead = true
+                    storyInfo.dead = false
+                    print(
+                        """
+                        You chose the \(info.choice[0])
+                        And you chose right! \(info.names[1]) ran accross the path and ran into the rest of the team, everyone was just so happy to see \(info.names[1]).
+                        """
+                    )
                 case 2:
                     _ = pathchoice.path2
-                    print("You chose the \(info.choice[1])")
-                    storyInfo.userAnswer = true
-                case 3:
-                    _ = pathchoice.path3
-                    print("You chose the \(info.choice[2])")
                     storyInfo.userAnswer = true
                     storyInfo.dead = true
+                    print(
+                    """
+                    You chose the \(info.choice[1])
+                    Sadly, down this path \(info.names[1]) ran into a giant bear guarding her cubs.
+                    \(info.names[1]) really sat and thought about it for a while, damn, he should've been married by now.
+                    """
+                    )
+                    
+                    
+                case 3:
+                    _ = pathchoice.path3
+                    storyInfo.userAnswer = true
+                    storyInfo.dead = true
+                    print(
+                        """
+                        You chose the \(info.choice[2])
+                        Sadly, down this path \(info.names[1]) ran striaght into a giant hole that had you falling for 2 hours.
+                        \(info.names[1]) contemplated about life for a while and thought, wow, he should've got married.
+                        """
+                    )
                         
                 default:
                     print("Please enter 1, 2, or 3!")
@@ -170,10 +181,15 @@ struct storyInfo {
             } else {
                 print("Please enter a valid number!")
             }
-        } while !storyInfo.userAnswer && storyInfo.dead == true
-
+        } while !storyInfo.userAnswer || storyInfo.dead == true
+        print(
+        """
+        All they had to do was move a little further down the path and they found the exit.
+        As soon as they got out, they all said screw this game hoped of for the day.
+        END OF CHAPTER
+        """
+        )
         
-      
         
         
         
