@@ -12,13 +12,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>67</string>
+					<string>60</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>66</string>
+					<string>59</string>
 					<key>Timestamp</key>
-					<string>720734062.895336</string>
+					<string>720991327.072657</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -38,12 +38,12 @@
 </string>
 				<key>leading</key>
 				<string>        
-        if let userInput = readLine() {
+            if let userInput = readLine() {
 </string>
 				<key>trailing</key>
-				<string>            
-            
-            
+				<string>                if userChoice == "1" {
+                    storyInfo.userAnswer = true
+                    storyInfo.dead = true
 </string>
 			</dict>
 			<key>type</key>

@@ -10,10 +10,11 @@ struct storyInfo {
     let game = "The Cyber Space"
     var choice: [String]
     static var userAnswer = false
+    static var dead = false
     
     
     
-    //"Laser Blazer 9000", "Fly Guys 25's", "Dark Doagans Invisibility potion"
+  
     
     mutating func changeChoice(setOfChoices: [String]) {
         self = storyInfo(choice: setOfChoices)
@@ -24,12 +25,12 @@ struct storyInfo {
 }
 
 
-func chapterOne() {
+
     var info = storyInfo(choice: ["Laser Blazer 9000", "Fly Guys 25's", "Dark Doagans Invisibility potion"])
     
     // Your portion of the story goes here
    
-//    var userInput: String
+
    
     
     func survive(alive: Bool) -> String {
@@ -49,65 +50,68 @@ func chapterOne() {
     
     
     func chall1(){
-        
-        var haveBlaster = false
-        var haveBoots = false
-        var haveInvis = false
-       
-        
-        
-        
         print("\(info.names[2]) come up with the decision to pick their first tool of the day. They can etiher pick up the \(info.choice[0]), the \(info.choice[1]), or \(info.choice[2]).")
         repeat {
         for (index, tool) in info.choice.enumerated() {
             print("Choose \(index + 1) for \(tool)")
         }
         
-        if let userInput = readLine() {
+            if let userInput = readLine() {
             let userChoice = userInput
-            
-            
-            
-                
                 if userChoice == "1" {
-                    haveBlaster = true
                     storyInfo.userAnswer = true
+                    storyInfo.dead = true
+                    print(
+                          """
+                          You can't shoot through dragon skin!
+                          \(survive(alive: true))
+                          """
+                    )
+                    
                 }
                 else if userChoice == "2" {
                     storyInfo.userAnswer = true
+                    storyInfo.dead = false
+                    print(
+                          """
+                          Good choice, \(info.names.joined(separator: ", ")) used the boots and got away!
+                          \(survive(alive: true))
+                          """
+                          )
                     
-                    haveBoots = true
                 }
                 else if userChoice == "3" {
                     storyInfo.userAnswer = true
-                    
-                    haveInvis = true
+                    storyInfo.dead = true
+                    print(
+                          """
+                          The dragon just burned the whole room!
+                          \(survive(alive: false))
+                          """
+                        )
+            
                 }
                 else {
                     print("Please re run and enter the correct number!")
                 }
             }
-        } while !storyInfo.userAnswer
+            
+        } while !storyInfo.userAnswer || storyInfo.dead == true
+//        if haveBlaster == true {
+//            print("You can't shoot through dragon skin!")
+//            print(survive(alive: false))
+//        }
+//        else if haveInvis == true {
+//            print("The dragon just burned the whole room!")
+//            print(survive(alive: false))
+//        }
+//        else {
+//            print("Good choice, \(info.names.joined(separator: ", ")) used the boots and got away!")
+//            print(survive(alive: true))
+//        }
         
         
-            if haveBlaster == true {
-                //alive.toggle()
-                print("You can't shoot through dragon skin!")
-                print(survive(alive: false))
-              
-            }
-            else if haveInvis == true {
-                //alive.toggle()
-                print("The dragon just burned the whole room!")
-                print(survive(alive: false))
-                
-            }
-            else {
-                print("Good choice, \(info.names.joined(separator: ", ")) used the boots and got away!")
-                print(survive(alive: true))
-                
-                
-            }
+            
         
     }
    
@@ -146,31 +150,28 @@ func chapterOne() {
             if let userInput = readLine(), let userChoice = Int(userInput) {
                 switch userChoice {
                 case 1:
-                    let result = pathchoice.path1
+                    _ = pathchoice.path1
                     print("You chose the \(info.choice[0])")
                     storyInfo.userAnswer = true
+                    storyInfo.dead = true
                 case 2:
-                    let result = pathchoice.path2
+                    _ = pathchoice.path2
                     print("You chose the \(info.choice[1])")
                     storyInfo.userAnswer = true
                 case 3:
-                    let result = pathchoice.path3
+                    _ = pathchoice.path3
                     print("You chose the \(info.choice[2])")
                     storyInfo.userAnswer = true
+                    storyInfo.dead = true
+                        
                 default:
                     print("Please enter 1, 2, or 3!")
                 }
             } else {
                 print("Please enter a valid number!")
             }
-        } while !storyInfo.userAnswer
-//        if let userInput = readLine(){
-//            switch pathchoice{
-//            case .path1:
-//            default:
-//                return "Try entering a number again"
-//            }
-//        }
+        } while !storyInfo.userAnswer && storyInfo.dead == true
+
         
       
         
@@ -179,7 +180,7 @@ func chapterOne() {
     }
         
         
-        
+func chapterOne() {
         
     Introduction()
         chall1()
