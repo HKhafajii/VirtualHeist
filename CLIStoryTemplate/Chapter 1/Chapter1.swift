@@ -19,10 +19,7 @@ struct storyInfo {
 
 var info = storyInfo(choice: ["Laser Blazer 9000", "Fly Guys 25's", "Dark Doagans Invisibility potion"])
     
-    // Your portion of the story goes here
-   
-
-   
+    
     
     func survive(alive: Bool) -> String {
         if alive == true {
@@ -118,7 +115,6 @@ Today they decided to enter \(info.game), and fight the newest challenge made by
                 for (index, direction) in info.choice.enumerated() {
                     print("Choose \(index + 1) to take the \(direction)")
                 }
-            
             if let userInput = readLine(), let userChoice = Int(userInput) {
                 switch userChoice {
                 case 1:
