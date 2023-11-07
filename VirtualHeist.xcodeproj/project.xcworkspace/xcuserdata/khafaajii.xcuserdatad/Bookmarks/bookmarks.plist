@@ -12,13 +12,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>68</string>
+					<string>58</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>67</string>
+					<string>57</string>
 					<key>Timestamp</key>
-					<string>720991690.083707</string>
+					<string>720993821.765561</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -37,7 +37,7 @@
 				<string>            let userChoice = userInput
 </string>
 				<key>leading</key>
-				<string>        
+				<string>        }
             if let userInput = readLine() {
 </string>
 				<key>trailing</key>

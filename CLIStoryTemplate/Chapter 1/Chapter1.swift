@@ -12,21 +12,12 @@ struct storyInfo {
     static var userAnswer = false
     static var dead = false
     
-    
-    
-  
-    
     mutating func changeChoice(setOfChoices: [String]) {
         self = storyInfo(choice: setOfChoices)
     }
-    
-   
-    
 }
 
-
-
-    var info = storyInfo(choice: ["Laser Blazer 9000", "Fly Guys 25's", "Dark Doagans Invisibility potion"])
+var info = storyInfo(choice: ["Laser Blazer 9000", "Fly Guys 25's", "Dark Doagans Invisibility potion"])
     
     // Your portion of the story goes here
    
@@ -56,14 +47,13 @@ Today they decided to enter \(info.game), and fight the newest challenge made by
         )
     }
     
-    
+
     func chall1(){
         print("\(info.names[2]) come up with the decision to pick their first tool of the day. They can etiher pick up the \(info.choice[0]), the \(info.choice[1]), or \(info.choice[2]).")
         repeat {
         for (index, tool) in info.choice.enumerated() {
             print("Choose \(index + 1) for \(tool)")
         }
-        
             if let userInput = readLine() {
             let userChoice = userInput
                 if userChoice == "1" {
@@ -75,7 +65,6 @@ Today they decided to enter \(info.game), and fight the newest challenge made by
                           \(survive(alive: true))
                           """
                     )
-                    
                 }
                 else if userChoice == "2" {
                     storyInfo.userAnswer = true
@@ -86,7 +75,6 @@ Today they decided to enter \(info.game), and fight the newest challenge made by
                           \(survive(alive: true))
                           """
                           )
-                    
                 }
                 else if userChoice == "3" {
                     storyInfo.userAnswer = true
@@ -97,19 +85,14 @@ Today they decided to enter \(info.game), and fight the newest challenge made by
                           \(survive(alive: false))
                           """
                         )
-            
                 }
                 else {
                     print("Please re run and enter the correct number!")
                 }
             }
-            
         } while !storyInfo.userAnswer || storyInfo.dead == true
     }
    
-        
-        
-        
         
     struct Chall2 {
         var chall2Lines: [String]
@@ -119,13 +102,11 @@ Today they decided to enter \(info.game), and fight the newest challenge made by
         }
     }
     
-    
     func chall2() {
         storyInfo.userAnswer = false
         let secChall = Chall2(chall2Lines: ["went to the", "They finally escaped"], problem: "They ran into a cave that's so dark they lost eachother")
         info.changeChoice(setOfChoices: ["left path", "right path", "straight path"])
         
-       
         enum pathchoice{
             case path1
             case path2
@@ -161,8 +142,6 @@ Today they decided to enter \(info.game), and fight the newest challenge made by
                     \(info.names[1]) really sat and thought about it for a while, damn, he should've been married by now.
                     """
                     )
-                    
-                    
                 case 3:
                     _ = pathchoice.path3
                     storyInfo.userAnswer = true
@@ -174,7 +153,6 @@ Today they decided to enter \(info.game), and fight the newest challenge made by
                         \(info.names[1]) contemplated about life for a while and thought, wow, he should've got married.
                         """
                     )
-                        
                 default:
                     print("Please enter 1, 2, or 3!")
                 }
@@ -189,15 +167,9 @@ Today they decided to enter \(info.game), and fight the newest challenge made by
         END OF CHAPTER
         """
         )
-        
-        
-        
-        
     }
         
-        
 func chapterOne() {
-        
     Introduction()
         chall1()
         chall2()
