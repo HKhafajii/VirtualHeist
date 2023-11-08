@@ -9,6 +9,7 @@ import Foundation
     // Your portion of the story goes here
     
 // this is a struct that provides all the info for the story like names, and careers. There is also a mutating function that changes the skills array inside the struct.
+
     struct StoryInfo {
         var names: [String] = ["Tavon", "Hassan", "Tre"]
         let club = "The Virtual Justice Club"
