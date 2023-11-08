@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "CDE39E73-C4E4-498E-9DCF-2A92990D9317"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF2E494B-99BA-4C08-8D6E-63849B40B9E1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CLIStoryTemplate/Chapter 5/Chapter5.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "FF2E494B-99BA-4C08-8D6E-63849B40B9E1 - b36dfac759156b75"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VirtualHeist.AymesGame.unsafeMutableAddressor : VirtualHeist.infoboutgame"
+                  moduleName = "VirtualHeist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aymehead/Documents/VirtualHeistAyme/CLIStoryTemplate/Chapter%205/Chapter5.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "FF2E494B-99BA-4C08-8D6E-63849B40B9E1 - ca510309dd70e72e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "one-time initialization function for AymesGame"
+                  moduleName = "VirtualHeist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aymehead/Documents/VirtualHeistAyme/CLIStoryTemplate/Chapter%205/Chapter5.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
